@@ -7,8 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://www.careerguide.com/career/wp-content/uploads/2023/09/MIT-AOE-placement.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ywqW5y6/Xn8EBPOrD+twANhFVdBXdz2ahYs/ElZKhJwG8VvP5YMl4UpDZnQ9MI9P" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>MIT-Students-BOT</title>
     <style>
+        .container{
+            width: 40%;
+        }
         body {
             display: flex;
             flex-direction: column;
@@ -17,31 +22,51 @@
             background-color: #9290C3;
         }
         iframe {
-            width: 40%;
+            width: 100%;
             height: 80vh;
             border-radius: 30px; 
+            border: 7px solid #535C91;
         }
         h1 {
             font-family: "Mochiy Pop P One", sans-serif;
             font-weight: 400;
             font-style: normal;
             color: #070F2B;
+            animation: shiv 2s ease-in-out 0s infinite alternate;
+            text-align: center;
         }
         @media (orientation:portrait) {
             iframe {
-                width: 90%;
+                width: 100%;
                 height: 80vh;
+            }
+            .container{
+                width: 90%;
+            }
+        }
+        @keyframes shiv
+        {
+            0% {
+                color: #070F2B; 
+            }
+            100% {
+                color: #535C91;
             }
         }
     </style>
 </head>
 <body>
-    <h1>MIT-Students-BOT</h1>
-    <iframe
-        allow="microphone;"
-        width="350"
-        height="430"
-        src="https://console.dialogflow.com/api-client/demo/embedded/1dcb7ce6-dff0-4842-9070-c2930dc1ad24">
-    </iframe>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4"> <i class="fa-solid fa-building-columns"></i>  MIT-Students-BOT <i class="fa-solid fa-robot"></i></h1>
+        <iframe
+            class="mt-3"
+            allow="microphone;"
+            width="350"
+            height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/1dcb7ce6-dff0-4842-9070-c2930dc1ad24">
+        </iframe>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iNl6L3rZf8Kz1wbLsT+uUJdIu70W7c5R8xp1m2N4pDWEAzPjOJJ27Yipt" crossorigin="anonymous"></script>
 </body>
 </html>
